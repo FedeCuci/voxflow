@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voxflow"
+version = "0.1.0"
+description = "Push-to-talk dictation for Linux: hold a key, speak, get clean text at your cursor"
+requires-python = ">=3.11"
+dependencies = [
+    "evdev>=1.6",
+    "requests>=2.31",
+    "anthropic>=0.40",
+    "PyGObject>=3.46",
+]
+
+[project.scripts]
+voxflow = "voxflow.cli:main"
+voxflow-settings = "voxflow.ui.settings:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

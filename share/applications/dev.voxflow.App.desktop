@@ -1,0 +1,23 @@
+[Desktop Entry]
+Type=Application
+Name=voxflow
+GenericName=Dictation
+Comment=Hold a key, speak, get clean text at your cursor
+Exec=voxflow app
+Icon=audio-input-microphone
+Terminal=false
+Categories=Utility;Accessibility;
+Keywords=dictation;speech;voice;transcription;dictate;microphone;
+StartupNotify=true
+StartupWMClass=dev.voxflow.App
+Actions=Dictate;Settings;
+
+[Desktop Action Dictate]
+Name=Dictate to clipboard
+Exec=voxflow dictate
+Icon=audio-input-microphone
+
+[Desktop Action Settings]
+Name=Settings
+Exec=voxflow settings
+Icon=preferences-system
